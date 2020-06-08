@@ -59,11 +59,7 @@ def update_theme(generic_tenant_client, theme)
   # modify the title tag
   templates.helpers = IO.read(File.new("helpers"))
 
-  # convert template object to hash
-  keys = templates.to_h.keys
-  t_body = {}
-  keys.each { |k| t_body[k.to_s] = templates.to_h[k] }
-  patch_theme_request = { theme: {templates: t_body}}
+  patch_theme_request = { theme: {templates: templates.to_h}}
   patch_theme_response = generic_tenant_client.patch_theme(theme.id, patch_theme_request)
 
   if patch_theme_response.status != 200
