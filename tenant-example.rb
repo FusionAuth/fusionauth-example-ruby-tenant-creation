@@ -1,9 +1,9 @@
 require './tenantops'
 
 NAME = "Organization2"
-FA_HOST = "http://localhost:9011"
+FA_URL = "http://localhost:9011"
 
-generic_tenant_client = FusionAuth::FusionAuthClient.new(ENV['API_KEY'], FA_HOST)
+generic_tenant_client = FusionAuth::FusionAuthClient.new(ENV['API_KEY'], FA_URL)
 
 result = create_new_tenant(generic_tenant_client, NAME)
 

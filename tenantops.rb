@@ -27,7 +27,7 @@ end
 
 def create_application(new_tenant_id, name)
   # used for making requests scoped to this tenant
-  new_tenant_client = FusionAuth::FusionAuthClient.new(ENV['API_KEY'], FA_HOST)
+  new_tenant_client = FusionAuth::FusionAuthClient.new(ENV['API_KEY'], FA_URL)
   new_tenant_client.set_tenant_id(new_tenant_id)
   
   # create an application in that tenant
