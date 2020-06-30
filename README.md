@@ -17,4 +17,4 @@ This has been tested with ruby 2.7.
 
 ## More info
 
-
+More in this blog post: https://fusionauth.io/blog/2020/06/30/private-labeling-with-multi-tenant
